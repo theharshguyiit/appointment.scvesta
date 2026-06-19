@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schedule Time With Harshit ❤️</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#ffdde1,#ee9ca7);
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0;
+}
+
+.card{
+    background:white;
+    width:90%;
+    max-width:500px;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    text-align:center;
+}
+
+h1{
+    color:#ff4d6d;
+}
+
+.subtitle{
+    color:#666;
+    margin-bottom:25px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:10px;
+    border:1px solid #ddd;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#ff4d6d;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:0.9;
+}
+
+#result{
+    margin-top:20px;
+    padding:15px;
+    border-radius:10px;
+    background:#fff0f3;
+    display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>❤️ Book Time With Harshit ❤️</h1>
+
+<p class="subtitle">
+Official Anti-Spam Appointment System™
+</p>
+
+<label>Date</label>
+<input type="date" id="date">
+
+<label>Time</label>
+<input type="time" id="time">
+
+<button onclick="book()">Schedule Appointment</button>
+
+<div id="result"></div>
+
+</div>
+
+<script>
+function book(){
+
+const date=document.getElementById("date").value;
+const time=document.getElementById("time").value;
+
+if(!date || !time){
+    alert("Please select both a date and time 😊");
+    return;
+}
+
+document.getElementById("result").style.display="block";
+
+document.getElementById("result").innerHTML=
+`
+<h3>Appointment Confirmed 💖</h3>
+<p>
+You have successfully scheduled a conversation with Harshit.
+</p>
+
+<p>
+📅 <b>${date}</b><br>
+🕒 <b>${time}</b>
+</p>
+
+<p>
+As a reward, Harshit promises not to send 40 call links before the appointment.
+</p>
+
+<p>
+✨ Screenshot this and send it to him ✨
+</p>
+`;
+}
+</script>
+
+</body>
+</html>
